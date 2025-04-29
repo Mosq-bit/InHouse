@@ -45,24 +45,24 @@
 }
 
 .slide-1{
-    background-image:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url(/assets/1.webp);
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url(/Inhouse/assets/1.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 
 }
 .slide-2{
-    background-image:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url(/assets/2_1.webp);
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url(/Inhouse/assets/2_1.webp);
 }
 .slide-3{
-    background-image:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url(/assets/3_1.webp);
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url(/Inhouse/assets/3_1.webp);
 }
 .slide-3 span,
 .slide-4 span {
     font-weight: 700;
 }
 .slide-4{
-    background-image:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url(/assets/4.webp);
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url(/Inhouse/assets/4.webp);
 }
 .swiper-btn {
     text-transform: uppercase;
