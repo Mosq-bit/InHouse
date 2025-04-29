@@ -28,108 +28,40 @@ var swiper = new Swiper(".mySwiper", {
   keyboard: true,
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const swiperConfig = {
-    // Core configuration
-    slidesPerView: 1.1, // Mobile-first default
-    spaceBetween: 15,
-    loop: true,
-    speed: 600,
-    effect: 'slide',
-    centeredSlides: true, // Default for mobile
-    
-    // Navigation elements
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    autoplay: {
-      delay: 9000,
-      disableOnInteraction: false, // Продолжать автопрокрутку после взаимодействия
-    },
-    
-    // Enhanced pagination
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'fraction',
-      formatFractionCurrent: number => number.toString().padStart(2, '0'),
-      formatFractionTotal: number => number.toString().padStart(2, '0'),
-    },
-  
-    
-    // Optimized breakpoints (mobile-first)
-    breakpoints: {
-      480: {
-        slidesPerView: 2,
-        spaceBetween: 15
-      },
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-        centeredSlides: false
-      },
-      768: {
-        slidesPerView: 2.5, // Shows part of next slide
-        spaceBetween: 20
-      },
-      992: {
-        slidesPerView: 3,
-        spaceBetween: 25
-      },
-      1200: {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        centeredSlides: false
-      }
-    },
-    
-    // Touch optimization
-    touchStartPreventDefault: false,
-    touchRatio: 1,
-    grabCursor: true,
-    resistanceRatio: 0.85,
-    
-    // Performance enhancements
-    watchSlidesProgress: true,
-    preventClicks: false,
-    preventClicksPropagation: false,
-    preloadImages: false,
-    lazy: {
-      loadPrevNext: true,
-      loadOnTransitionStart: true
-    },
-    
-    // Keyboard & accessibility
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true,
-    },
-    
-    a11y: {
-      enabled: true,
-      prevSlideMessage: 'Previous slide',
-      nextSlideMessage: 'Next slide',
-      firstSlideMessage: 'This is the first slide',
-      lastSlideMessage: 'This is the last slide',
-      paginationBulletMessage: 'Go to slide {{index}}',
-      notificationClass: 'swiper-notification'
-    },
-    
-    // Observer for dynamic content
-    observer: true,
-    observeParents: true,
-    observeSlideChildren: true,
-    
-    // Event callbacks for better control
-    on: {
-      init() {
-        this.autoplay.running = true;
-      },
-      resize() {
-        this.update();
-      }
-    }
-  };
 
-  const swiper = new Swiper('.kits__mySwiper', swiperConfig);
+
+var swiper = new Swiper('.kits__mySwiper', {
+  slidesPerView: 4,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      centeredSlides: true
+    },
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 10
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 25
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 30
+    }
+  }
 });
