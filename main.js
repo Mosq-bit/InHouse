@@ -8,7 +8,7 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
   },
   autoplay: {
-    delay: 3000, // Интервал в миллисекундах (3 секунды)
+    delay: 9000,
     disableOnInteraction: false, // Продолжать автопрокрутку после взаимодействия
   },
   speed: 1000,
@@ -42,6 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 9000,
+      disableOnInteraction: false, // Продолжать автопрокрутку после взаимодействия
     },
     
     // Enhanced pagination
