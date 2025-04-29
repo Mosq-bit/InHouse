@@ -28,7 +28,7 @@ var swiper = new Swiper(".mySwiper", {
   keyboard: true,
 });
 
-    document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const swiperConfig = {
     // Core configuration
     slidesPerView: 1.1, // Mobile-first default
@@ -51,14 +51,7 @@ var swiper = new Swiper(".mySwiper", {
       formatFractionCurrent: number => number.toString().padStart(2, '0'),
       formatFractionTotal: number => number.toString().padStart(2, '0'),
     },
-    
-    // Autoplay configuration
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-      waitForTransition: true // Smoother autoplay
-    },
+  
     
     // Optimized breakpoints (mobile-first)
     breakpoints: {
