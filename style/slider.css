@@ -22,13 +22,13 @@
     gap: 40px;
 }
 .swiper-button-next{
-    content: url(/assets/right.png);
+    content: url(/InHouse/assets/right.png);
     width: 62px;
     height: 62px;
 
 }
 .swiper-button-prev{
-    content: url(/assets/left.png);
+    content: url(/InHouse/assets/left.png);
     width: 62px;
     height: 62px;
 }
