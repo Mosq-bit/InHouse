@@ -1,0 +1,100 @@
+.mobile__navigation {
+    padding: 0 20px 0 0;
+    display: block;
+}
+
+.mobile__navigation-toggler {
+    display: none;
+}
+
+.mobile__label {
+    display: block;
+
+    height: 14px;
+    /* border: 2px solid var(--black); */
+    background-color: var(--white);
+
+}
+
+.mobile__label span,
+.mobile__label span::before,
+.mobile__label span::after {
+    z-index: 1;
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background-color: var(--white);
+    transition: .3s;
+}
+
+.mobile__label span {
+    margin-left: 11px;
+    top: 20px;
+
+}
+
+.mobile__label span::before {
+    content: '';
+    top: 6px; 
+}
+
+.mobile__label span::after {
+    content: '';
+    top: -6px;
+}
+
+#toggler-id:checked ~ .mobile__label span::after {
+    top: 0;
+    transform: rotate(45deg);
+}
+#toggler-id:checked ~ .mobile__label span::before {
+top: 0px;
+    transform: rotate(-45deg);
+}
+
+#toggler-id:checked ~ .mobile__label span {
+    width: 0;
+}
+
+
+
+.mobile__menu {
+    padding: 55px 20px 0;
+    /* что бы растянуть на все простаранство */
+    position: fixed;
+    /* top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; */
+    /* если все свойства одинаковые то можно записать в одно свойство inset: 0;*/
+    inset: 0;
+    translate: 100% 0;
+    transition: all .33s;
+    background-color: var(--bg-main);
+    /*  */
+    /* visibility: hidden; */
+    /* размытый фон */
+    backdrop-filter: blur(10px);
+    translate: 100% 0;
+    transition: translate .22s;
+
+}
+
+#toggler-id:checked ~ .mobile__menu {
+    /* а именно сделать ему visibility: visible; а меню visibility: hidden;*/
+    /* visibility: visible; */
+    translate: 0;
+}
+
+.mobile-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.mobile__link {
+    font-weight: 400;
+    font-size: 18px;
+}
+

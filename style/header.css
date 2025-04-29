@@ -1,0 +1,43 @@
+.header__section {
+    position: sticky;
+    top: 0;
+    /* Прилипает к верху экрана */
+    z-index: 100;
+    /* Чтобы шапка была поверх других элементов */
+    background: var(--black);
+    /* Фон для прозрачности */
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Тень для эффекта "плавающей" шапки */
+    padding: 0 30px;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__link {
+    color: var(--white);
+}
+
+.header__pic {
+    max-width: 100px;
+}
+
+.header__social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__social-link {}
+
+@media (max-width:768px) {
+    .header__social-link {
+        display: none;
+    }
+
+
+}

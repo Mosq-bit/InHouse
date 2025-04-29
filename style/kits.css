@@ -1,0 +1,185 @@
+.kits__section {
+    margin: 60px 0 30px;
+}
+
+.kits__wrapper {
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.kits__title {
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.kits__mySwiper {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.kits__swiper-wrapper {
+    display: flex;
+}
+
+.kits__swiper-slide {
+    width: 100%;
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
+    border-radius: 15px;
+    background-color: rgb(43, 43, 43);
+}
+
+.kits__swiper-slide img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.kits__content {
+    padding-left: 15px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 15px;
+}
+
+.kits__content-text h4 {
+    padding-top: 8px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.kits__content-text p {
+    padding-top: 8px;
+    font-size: 13px;
+}
+
+.kits__btn-group {
+    margin-top: 10px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.kits__btn-link {
+    text-align: center;
+    padding: 15px;
+    border-radius: 25px;
+    color: var(--black);
+    background-color: var(--white);
+    font-size: 13px;
+}
+
+.kits__btn-link:hover {
+    opacity: 0.7;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: none; /* Скрываем кнопки навигации на мобильных */
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: auto;
+    left: auto;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 3px 8px;
+    border-radius: 15px;
+    color: white;
+    font-size: 12px;
+}
+
+.swiper-pagination-bullet {
+    background: white;
+    opacity: 0.5;
+    width: 6px;
+    height: 6px;
+    margin: 0 3px;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+/* Десктопная версия */
+@media (min-width: 768px) {
+    .kits__section {
+        margin: 100px 0 50px;
+    }
+    
+    .kits__wrapper {
+        margin-bottom: 30px;
+        padding: 0 20px;
+    }
+    
+    .kits__title {
+        font-size: 36px;
+    }
+    
+    .kits__swiper-slide {
+        gap: 20px;
+        border-radius: 20px;
+    }
+    
+    .kits__swiper-slide img {
+        border-radius: 20px;
+    }
+    
+    .kits__content {
+        padding-left: 20px;
+        gap: 20px;
+    }
+    
+    .kits__content-text h4 {
+        padding-top: 10px;
+        font-size: 25px;
+    }
+    
+    .kits__content-text p {
+        padding-top: 10px;
+        font-size: 14px;
+    }
+    
+    .kits__btn-group {
+        margin-top: 15px;
+        padding-bottom: 20px;
+        gap: 15px;
+    }
+    
+    .kits__btn-link {
+        padding: 20px;
+        border-radius: 30px;
+        font-size: 14px;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: flex; /* Показываем кнопки навигации на десктопе */
+    }
+    
+    .swiper-pagination {
+        bottom: 10px;
+        right: 10px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+    
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        margin: 0 4px;
+    }
+}
