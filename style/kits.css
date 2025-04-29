@@ -1,179 +1,144 @@
-.kits__section {
-    margin: 60px 0 30px;
+.container__sm {
 }
-
 .kits__wrapper {
-    margin-bottom: 20px;
+    padding-top: 60px;
+}
+
+.kits__title{
+    font-size: 36px;
+}
+  .kits__mySwiper {
+    margin-top: 40px;
+    position: relative;
     padding: 0 15px;
-}
-
-.kits__title {
-    font-size: 28px;
-    font-weight: 300;
-    text-align: center;
-}
-
-.kits__mySwiper {
-    width: 100%;
-    margin: 0 auto;
-}
-
-/* Исправлено: добавлен overflow-hidden для wrapper */
-.kits__swiper-wrapper {
-    display: flex;
+  }
+  
+  .kits__swiper-wrapper {
     align-items: stretch;
-    overflow: hidden; /* Предотвращает выпадение элементов */
-}
-
-/* Исправлено: заменена фиксированная высота на min-height + auto */
-.kits__swiper-slide {
-    width: 100%;
-    max-width: 260px; /* Уменьшено для мобильных */
-    min-height: 500px; /* Вместо фиксированной высоты */
+  }
+  
+  .kits__swiper-slide {
     height: auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
     border-radius: 15px;
-    background-color: rgb(43, 43, 43);
-}
-
-/* Исправлено: добавлена базовая высота для изображений */
-.kits__swiper-slide img {
+    background: rgb(43, 43, 43);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .kits__swiper-slide:hover {
+    transform: translateY(-5px);
+  }
+  
+  .kits__swiper-slide img {
     width: 100%;
-    height: 160px; /* Явно задано значение */
+    height: 180px;
     object-fit: cover;
-    border-radius: 15px 15px 0 0;
-}
-
-/* Исправлено: упрощена структура padding */
-.kits__content {
-    flex: 1;
-    padding: 15px 20px; /* Верхний padding добавлен */
+  }
+  
+  .kits__content {
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-}
-
-/* Исправлено: убрано лишнее padding-bottom */
-.kits__content-text {
-    flex: 1; /* Раскомментировано - важно для выравнивания */
-    display: flex;
-    flex-direction: column;
-}
-
-.kits__content-text h4 {
-    font-size: 20px;
-    font-weight: 300;
-    margin-bottom: 8px; /* Заменен padding-top на margin-bottom */
-}
-
-.kits__content-text p {
-    font-size: 13px;
-    margin: 8px 0;
     flex-grow: 1;
-}
-
-/* Исправлено: добавлен flex-shrink для фиксированного положения */
-.kits__btn-group {
-    flex-shrink: 0; /* Предотвращает сжатие */
-    padding-bottom: 15px;
+  }
+  
+  .kits__content-text {
+    text-align: start;
+    margin-bottom: 20px;
+  }
+  .kits__content-text h4{
+    font-size: 25px;
+    font-weight: 300;
+  }
+  .kits__content-text p{
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .kits__btn-group {
+    margin-top: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-.kits__btn-link {
+  }
+  
+  .kits__btn-link {
+    display: block;
     text-align: center;
-    padding: 15px;
+    padding: 12px;
     border-radius: 25px;
-    color: var(--black);
-    background-color: var(--white);
+    background: white;
+    color: black;
     font-size: 13px;
-    transition: opacity 0.3s ease; /* Добавлен плавный переход */
-}
+    transition: all 0.3s ease;
+  }
 
-.kits__btn-link:hover {
-    opacity: 0.7;
-}
+  .swiper-button-next{
+    content: url(/InHouse/assets/right.png);
 
-.swiper-button-next,
-.swiper-button-prev {
-    display: none;
-}
 
-.swiper-pagination {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    width: auto;
-    left: auto;
-    display: inline-block;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 3px 8px;
-    border-radius: 15px;
-    color: white;
-    font-size: 12px;
 }
+.swiper-button-prev{
+    content: url(/InHouse/assets/left.png);
 
-/* Десктопная версия */
-@media (min-width: 768px) {
-    .kits__section {
-        margin: 100px 0 50px;
-    }
-    
-    .kits__wrapper {
-        margin-bottom: 30px;
-        padding: 0 20px;
-    }
-    
-    .kits__title {
-        font-size: 36px;
-    }
-    
-    .kits__swiper-slide {
-        max-width: 300px;
-        min-height: 550px; /* Увеличено пропорционально */
+}
+  
+  /* Навигация */
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 62px;
+    height: 62px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Пагинация */
+  .swiper-pagination {
+    position: static;
+    margin-top: 20px;
+  }
+  
+  .swiper-pagination-bullet {
+    background: white;
+    opacity: 0.5;
+    width: 8px;
+    height: 8px;
+  }
+  
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    width: 16px;
+    border-radius: 4px;
+  }
+  
+  /* Адаптивные стили */
+  @media (max-width: 767px) {
+    .swiper-button-next,
+    .swiper-button-prev {
     }
     
     .kits__swiper-slide img {
-        height: 200px;
-        border-radius: 20px 20px 0 0;
+      height: 150px;
     }
     
     .kits__content {
-        padding: 20px; /* Унифицирован padding */
-        gap: 20px;
+      padding: 15px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .kits__mySwiper {
+      padding: 0 30px;
     }
     
-    .kits__content-text h4 {
-        font-size: 25px;
+    .kits__swiper-slide img {
+      height: 200px;
     }
-    
-    .kits__content-text p {
-        font-size: 14px;
+  }
+  
+  @media (min-width: 1200px) {
+    .kits__swiper-slide img {
+      height: 220px;
     }
-    
-    .kits__btn-group {
-        padding-bottom: 20px;
-        gap: 15px;
-    }
-    
-    .kits__btn-link {
-        padding: 20px;
-        border-radius: 30px;
-        font-size: 14px;
-    }
-    
-    .swiper-button-next,
-    .swiper-button-prev {
-        display: flex;
-    }
-    
-    .swiper-pagination {
-        bottom: 10px;
-        right: 10px;
-        padding: 5px 10px;
-        font-size: 14px;
-    }
-}
+  }
